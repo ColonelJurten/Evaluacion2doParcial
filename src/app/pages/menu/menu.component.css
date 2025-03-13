@@ -1,0 +1,38 @@
+/* Fondo oscuro y estilo imperial */
+.custom-navbar {
+    background-color: #1a1a1a; /* Negro profundo */
+    border-bottom: 2px solid #d4af37; /* Dorado imperial */
+    font-family: "Cinzel", serif;
+}
+
+/* Logo */
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Estilo de los enlaces */
+.navbar-nav .nav-link {
+    color: #e0dede;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Cambio de color en hover */
+.navbar-nav .nav-link:hover {
+    color: #d4af37; /* Dorado imperial */
+}
+
+/* Enlace activo */
+.navbar-nav .nav-link.active {
+    color: #d4af37 !important;
+    text-shadow: 0px 0px 10px rgba(212, 175, 55, 0.8);
+}
+
+/* Estilos responsivos */
+@media (max-width: 991px) {
+    .navbar-nav {
+        text-align: center;
+    }
+}

@@ -1,0 +1,77 @@
+/* Diseño Oscuro y Estilo Warhammer */
+.catalogo-container {
+    background-color: rgb(26, 26, 26,0.5);
+    color: #e0dede;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 223, 186, 0.1);
+    font-family: "Cinzel", serif; /* Fuente con estilo imperial */
+}
+
+.catalogo-titulo {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d4af37;
+    text-shadow: 2px 2px 10px rgba(212, 175, 55, 0.8);
+}
+
+.alta-libros h4, h4 {
+    color: #b30000;
+    font-weight: bold;
+}
+
+/* Estilizando el formulario */
+.form-container {
+    background-color: #292929;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #b30000;
+}
+
+.form-container label {
+    color: #e0dede;
+    font-weight: bold;
+}
+
+.botones {
+    margin-top: 15px;
+}
+
+.botones button {
+    margin-right: 10px;
+}
+
+/* Estilizando las tarjetas de libros */
+.libro-card {
+    background-color: #333;
+    color: #e0dede;
+    border: 1px solid #d4af37;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 10px rgba(255, 223, 186, 0.2);
+}
+
+.libro-card .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #d4af37;
+}
+
+.libro-card .card-text {
+    font-size: 0.9rem;
+}
+
+.libro-card .btn {
+    background-color: #b30000;
+    border: none;
+}
+
+.libro-card .btn:hover {
+    background-color: #8a0000;
+}
+.error-text {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    font-weight: bold;
+}

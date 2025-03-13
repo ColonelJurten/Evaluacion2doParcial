@@ -1,0 +1,67 @@
+<div class="catalogo-container">
+    <h1 class="catalogo-titulo">CATÁLOGO DE LIBROS DE WARHAMMER 40K</h1>
+
+    <div class="alta-libros">
+        <h4>Alta de Libros</h4>
+        <div class="form-container">
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Título</label>
+                    <input type="text" class="form-control" [(ngModel)]="libro.titulo" #titulo="ngModel" required />
+                    <div class="error-text" *ngIf="titulo.invalid && titulo.touched">Campo obligatorio</div>
+                </div>
+                <div class="col-md-6">
+                    <label>Autor</label>
+                    <input type="text" class="form-control" [(ngModel)]="libro.autor" #autor="ngModel" required />
+                    <div class="error-text" *ngIf="autor.invalid && autor.touched">Campo obligatorio</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Editorial</label>
+                    <input type="text" class="form-control" [(ngModel)]="libro.editorial" #editorial="ngModel" required />
+                    <div class="error-text" *ngIf="editorial.invalid && editorial.touched">Campo obligatorio</div>
+                </div>
+                <div class="col-md-6">
+                    <label>Año de Publicación</label>
+                    <input type="number" class="form-control" [(ngModel)]="libro.anioPublicacion" #anioPublicacion="ngModel" required />
+                    <div class="error-text" *ngIf="anioPublicacion.invalid && anioPublicacion.touched">Campo obligatorio</div>
+                </div>
+            </div>
+            <div class="botones">
+                <button class="btn btn-primary" (click)="insertarLibro()" [disabled]="!validarFormulario()">
+                    <i class="fas fa-plus"></i> Insertar
+                </button>
+                <button class="btn btn-warning" (click)="updateLibro()" [disabled]="!validarFormulario()">
+                    <i class="fas fa-edit"></i> Modificar
+                </button>
+                <button class="btn btn-danger" (click)="deleteLibro()">
+                    <i class="fas fa-trash"></i> Eliminar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <h4>Listado de Libros</h4>
+    <div class="row">
+        <div *ngIf="libros.length === 0" class="col-12 text-center">
+            <p class="no-books">No hay libros en la base de datos.</p>
+        </div>
+        
+        <div class="col-md-4" *ngFor="let libro of libros">
+            <div class="card libro-card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ libro.titulo }}</h5>
+                    <p class="card-text"><strong>Autor:</strong> {{ libro.autor }}</p>
+                    <p class="card-text"><strong>Editorial:</strong> {{ libro.editorial }}</p>
+                    <p class="card-text"><strong>Año:</strong> {{ libro.anioPublicacion }}</p>
+                    <button class="btn btn-success" (click)="selectLibro(libro)">
+                        <i class="fas fa-bookmark"></i> Seleccionar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="container">
+    <!-- 📌 Encabezado -->
+    <h1 class="title">Catálogo de Productos - Black Library</h1>
+
+    <!-- 📌 Formulario para agregar/modificar productos -->
+    <div class="card form-card">
+        <div class="card-body">
+            <h3 class="card-title">Añadir / Modificar Producto</h3>
+            <form (ngSubmit)="insertarProducto()">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Nombre</label>
+                        <input type="text" class="form-control" [(ngModel)]="producto.nombre" required name="nombre"/>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Descripción</label>
+                        <input type="text" class="form-control" [(ngModel)]="producto.descripcion" required name="descripcion"/>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <label>Costo</label>
+                        <input type="number" class="form-control" [(ngModel)]="producto.costo" required name="costo"/>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-primary">Guardar Producto</button>
+                    <button type="button" class="btn btn-warning" (click)="updateProducto()">Modificar</button>
+                    <button type="button" class="btn btn-danger" (click)="deleteProducto()">Eliminar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 📌 Lista de productos -->
+    <h2 class="subtitle mt-5">Lista de Productos</h2>
+    <div class="product-list">
+        <div class="product-card" *ngFor="let producto of productos" (click)="selectProducto(producto)">
+            <!-- 📌 Imagen predeterminada local -->
+            <img src="../../../assets/images/octarius-2.png" alt="Producto Predeterminado">
+            <div class="product-info">
+                <h3>{{ producto.nombre }}</h3>
+                <p>{{ producto.descripcion }}</p>
+                <span class="price">${{ producto.costo }}</span>
+            </div>
+        </div>
+    </div>
+</div>

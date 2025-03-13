@@ -1,0 +1,119 @@
+/* 📌 Diseño General */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    font-family: 'Georgia', serif;
+    color: white;
+    background-color: #121212;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* 📌 Títulos */
+.title {
+    text-align: center;
+    font-size: 32px;
+    color: gold;
+    text-transform: uppercase;
+    border-bottom: 2px solid gold;
+    padding-bottom: 10px;
+}
+
+.subtitle {
+    color: gold;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+/* 📌 Estilos del Formulario */
+.form-card {
+    background: #1d1d1d;
+    border: 1px solid gold;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.card-title {
+    color: white;
+    font-size: 22px;
+    text-align: center;
+}
+
+.form-control {
+    background-color: #2a2a2a;
+    border: 1px solid gold;
+    color: white;
+}
+
+.form-control:focus {
+    border-color: gold;
+    box-shadow: 0 0 5px gold;
+}
+
+/* 📌 Botones */
+.btn {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: gold;
+    color: black;
+    border: none;
+}
+
+.btn-warning {
+    background-color: darkorange;
+}
+
+.btn-danger {
+    background-color: darkred;
+}
+
+/* 📌 Vista de Productos */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.product-card {
+    background: #1d1d1d;
+    border: 1px solid gold;
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    border-bottom: 2px solid gold;
+}
+
+.product-info {
+    padding: 10px;
+}
+
+.price {
+    font-weight: bold;
+    color: gold;
+    font-size: 18px;
+}
+
+/* 📌 Imagen Predeterminada */
+.image-preview img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: auto;
+}
